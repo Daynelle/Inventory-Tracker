@@ -4,6 +4,7 @@
  */
 package NardosTrackit.Order;
 
+import java.awt.TextArea;
 import java.awt.print.Book;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -15,7 +16,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author rosha
+ * @author Stephen-Jon Dixon, Roshane Roach, Jhanoi Samuels,Danielle Tulloch, Shenelle Turner,Victoria Whyte
  */
 public class SearchOrders extends javax.swing.JFrame {
 
@@ -39,21 +40,18 @@ public class SearchOrders extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         SearchField = new javax.swing.JTextField();
         CustNameField = new javax.swing.JTextField();
-        Items = new javax.swing.JTextField();
-        Price = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        Quantity = new javax.swing.JTextField();
         SearchButton = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        SearchResults = new javax.swing.JTextArea();
+        TotalCost = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(102, 255, 0));
+        jPanel1.setBackground(new java.awt.Color(153, 204, 255));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Mongolian Baiti", 1, 18)); // NOI18N
         jLabel1.setText("Search Orders By ID");
 
         CustNameField.addActionListener(new java.awt.event.ActionListener() {
@@ -62,18 +60,11 @@ public class SearchOrders extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel2.setText("Item Ordered");
-
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel3.setText("Price");
-
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel4.setText("Quantity");
-
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
         jLabel5.setText("Customer Name");
 
+        SearchButton.setBackground(new java.awt.Color(102, 153, 255));
+        SearchButton.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
         SearchButton.setText("Search");
         SearchButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -81,10 +72,24 @@ public class SearchOrders extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         jButton1.setText("Back");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
+            }
+        });
+
+        SearchResults.setColumns(20);
+        SearchResults.setFont(new java.awt.Font("Serif", 1, 18)); // NOI18N
+        SearchResults.setRows(5);
+        jScrollPane1.setViewportView(SearchResults);
+
+        TotalCost.setEditable(false);
+        TotalCost.setFont(new java.awt.Font("Serif", 1, 24)); // NOI18N
+        TotalCost.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TotalCostActionPerformed(evt);
             }
         });
 
@@ -95,26 +100,26 @@ public class SearchOrders extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane1)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1)))
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(102, 102, 102)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(CustNameField)
-                        .addComponent(SearchField)
-                        .addComponent(Items, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
-                        .addComponent(Quantity))
-                    .addComponent(Price, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
-                .addComponent(SearchButton)
-                .addGap(28, 28, 28))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(61, 61, 61)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(SearchField, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(SearchButton))
+                                    .addComponent(CustNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jButton1))
+                        .addGap(0, 10, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(TotalCost, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -124,44 +129,41 @@ public class SearchOrders extends javax.swing.JFrame {
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(SearchField, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(SearchButton))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 68, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addComponent(CustNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Items, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Quantity, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
-                    .addComponent(Price, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE))
-                .addGap(55, 55, 55)
+                        .addComponent(CustNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(TotalCost, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(3, 3, 3)
                 .addComponent(jButton1)
-                .addContainerGap())
+                .addGap(17, 17, 17))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(35, 35, 35))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
+setLocationRelativeTo(null);
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void CustNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustNameFieldActionPerformed
@@ -172,21 +174,47 @@ public class SearchOrders extends javax.swing.JFrame {
         // TODO add your handling code here:
         Boolean found = false;
         String ID = SearchField.getText();
-        Items.setText("");
-        Quantity.setText("");
-        Price.setText("0");
+        String itemsname = "";
+        String quantity = "   ";
+        StringBuilder SearchText = new StringBuilder();
+        Double pricDouble=0.0;
         try (Scanner scanner = new Scanner(new FileInputStream("storage/orderLine.txt"))) {
+            SearchText.append(" ITEM NAME \t\t QUANTITY \t\t PRICE\n");
             while (scanner.hasNextLine()) {
                 String orderLine = scanner.nextLine();
                 if (orderLine.length() > 0) {
                     String orderParts[] = orderLine.split(",");
                     if (ID.equalsIgnoreCase(orderParts[1])){
                         CustNameField.setText(orderParts[0]);
-                        Items.setText(Items.getText()+ "\t"+orderParts[2]);
-                        Quantity.setText(Quantity.getText() + "\t"+ orderParts[3]);
-                        Price.setText("$"+String.valueOf(Double.parseDouble(Price.getText()) + Double.parseDouble(orderParts[4]) ));
+                        SearchText.append(" "+orderParts[2]);
+                        SearchText.append("\t\t           ");
+                        SearchText.append(orderParts[3]);
+                        SearchText.append("\t\t ");
+                        SearchText.append("$"+orderParts[4]);
+                        SearchText.append("\n");
+                        //SearchText.append("\n\n\n\t\t\t yoooo" );
+                            
+                        SearchResults.setText(SearchText.toString());
+
+
+
+
+                        //itemsname = itemsname + orderParts[2]+" \t";
+                        //SearchResults.setText("ITEM NAME \t\t QUANTITY \t\t PRICE\n"); 
+
+                        
+                        //Items.setText(itemsname);
+                        //quantity = quantity + orderParts[3]+"\t        ";
+                        //Items.setText(Items.getText() +orderParts[2]+"\t");
+                        //Quantity.setText(quantity);
+                        pricDouble = pricDouble + Double.parseDouble(orderParts[4]);
+                        //pricDouble = pricDouble + Double.parseDouble(orderParts[4]);
+                        
+                        TotalCost.setText("Total  $"+ String.valueOf(pricDouble));
+                        //Price.setText("$"+String.valueOf(Double.parseDouble(Price.getText()) + Double.parseDouble(orderParts[4]) ));
                         found = true;
                     }
+                    
 
                 }
             }
@@ -195,9 +223,6 @@ public class SearchOrders extends javax.swing.JFrame {
         }
         if (!found){
             JOptionPane.showMessageDialog(this, "Order has Not Been Found !");
-            Items.setText("");
-            Quantity.setText("");
-            Price.setText("");
         }else{
             JOptionPane.showMessageDialog(this, "Order Found !");
         }
@@ -209,6 +234,10 @@ public class SearchOrders extends javax.swing.JFrame {
         om.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void TotalCostActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TotalCostActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TotalCostActionPerformed
 
     /**
      * @param args the command line arguments
@@ -247,17 +276,14 @@ public class SearchOrders extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField CustNameField;
-    private javax.swing.JTextField Items;
-    private javax.swing.JTextField Price;
-    private javax.swing.JTextField Quantity;
     private javax.swing.JButton SearchButton;
     private javax.swing.JTextField SearchField;
+    private javax.swing.JTextArea SearchResults;
+    private javax.swing.JTextField TotalCost;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

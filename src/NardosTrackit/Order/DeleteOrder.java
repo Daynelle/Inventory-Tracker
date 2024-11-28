@@ -18,7 +18,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author rosha
+ * @author Stephen-Jon Dixon, Roshane Roach, Jhanoi Samuels,Danielle Tulloch, Shenelle Turner,Victoria Whyte
  */
 public class DeleteOrder extends javax.swing.JFrame {
 
@@ -46,12 +46,13 @@ public class DeleteOrder extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(0, 255, 51));
+        jPanel1.setBackground(new java.awt.Color(0, 153, 51));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Black", 2, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Enter Order ID to Delete");
 
+        DeleteBtn.setBackground(new java.awt.Color(255, 51, 51));
         DeleteBtn.setText("Delete");
         DeleteBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -83,9 +84,9 @@ public class DeleteOrder extends javax.swing.JFrame {
                                 .addComponent(DeleteField, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(115, 115, 115))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButton1)
-                                    .addComponent(DeleteBtn))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(DeleteBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGap(154, 154, 154))))))
         );
         jPanel1Layout.setVerticalGroup(
@@ -114,6 +115,8 @@ public class DeleteOrder extends javax.swing.JFrame {
         );
 
         pack();
+setLocationRelativeTo(null);
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void DeleteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteBtnActionPerformed

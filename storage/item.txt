@@ -1,2 +1,6 @@
-Chicken Patty,340.0,10
-Tastee,27.0,5
+Chicken Patty,340.0,9
+Patty,270.0,10
+Water,100.0,20
+Bag Jooce,50.0,28
+Kiss Cake ,100.0,13
+Pringles,150.0,10

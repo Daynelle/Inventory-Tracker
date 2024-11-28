@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package NardosTrackit.Inventory;
 
 import javax.swing.*;
@@ -11,7 +7,7 @@ import NardosTrackit.Helpers.*;;
 
 /**
  *
- * @author Sourcecodester
+ * @author Stephen-Jon Dixon, Roshane Roach, Jhanoi Samuels,Danielle Tulloch, Shenelle Turner,Victoria Whyte
  */
 public class AddItem extends javax.swing.JFrame {
     
@@ -44,15 +40,19 @@ public class AddItem extends javax.swing.JFrame {
         backButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(0, 153, 204));
+        setBackground(new java.awt.Color(255, 153, 0));
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         jLabel1.setText("Item Name");
 
+        jLabel2.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         jLabel2.setText("Item Price");
 
+        jLabel3.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         jLabel3.setText("Item Quantity");
 
-        addButton.setBackground(new java.awt.Color(0, 255, 153));
+        addButton.setBackground(new java.awt.Color(255, 255, 51));
+        addButton.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         addButton.setText("Add");
         addButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -60,6 +60,7 @@ public class AddItem extends javax.swing.JFrame {
             }
         });
 
+        backButton.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         backButton.setText("Back");
         backButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,6 +122,7 @@ public class AddItem extends javax.swing.JFrame {
         );
 
         pack();
+setLocationRelativeTo(null);
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package NardosTrackitLogIn;
 
 import javax.swing.JOptionPane;
@@ -10,7 +6,7 @@ import NardosSystem.MainMenu;
 
 /**
  *
- * @author Sourcecodester
+ *@author Stephen-Jon Dixon, Roshane Roach, Jhanoi Samuels,Danielle Tulloch, Shenelle Turner,Victoria Whyte
  */
 public class Login extends javax.swing.JFrame {
 
@@ -29,8 +25,8 @@ public class Login extends javax.swing.JFrame {
      * Set default username and password
      */
     private void setDefaultUserName() {
-        this.userNameField.setText("admin");
-        this.passwordField.setText("admin");
+        this.userNameField.setText("");
+        this.passwordField.setText("");
     }
 
     /**
@@ -51,14 +47,14 @@ public class Login extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        loginPanel.setBackground(new java.awt.Color(153, 153, 255));
-        loginPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "FSKTM Restaurant", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 204))); // NOI18N
+        loginPanel.setBackground(new java.awt.Color(51, 102, 255));
+        loginPanel.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(0, 0, 102), null, null)));
         loginPanel.setForeground(new java.awt.Color(153, 153, 255));
         loginPanel.setToolTipText("");
         loginPanel.setName(""); // NOI18N
 
         userNameLabel.setBackground(new java.awt.Color(255, 153, 153));
-        userNameLabel.setForeground(new java.awt.Color(0, 0, 255));
+        userNameLabel.setFont(new java.awt.Font("Tw Cen MT", 1, 14)); // NOI18N
         userNameLabel.setText("User Name: ");
 
         userNameField.addActionListener(new java.awt.event.ActionListener() {
@@ -67,9 +63,10 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
-        passwordLabel.setForeground(new java.awt.Color(0, 0, 204));
+        passwordLabel.setFont(new java.awt.Font("Tw Cen MT", 1, 14)); // NOI18N
         passwordLabel.setText("Password :");
 
+        loginButton.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         loginButton.setText("Log In");
         loginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,7 +105,7 @@ public class Login extends javax.swing.JFrame {
                     .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(loginButton)
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -118,19 +115,20 @@ public class Login extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(45, 45, 45)
                 .addComponent(loginPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(54, 54, 54)
                 .addComponent(loginPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap(67, Short.MAX_VALUE))
+                .addContainerGap(73, Short.MAX_VALUE))
         );
 
         loginPanel.getAccessibleContext().setAccessibleName("");
 
         pack();
+setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed

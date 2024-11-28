@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package NardosTrackitSystem;
 
 import javax.swing.JOptionPane;
@@ -10,7 +6,7 @@ import NardosSystem.MainMenu;
 
 /**
  *
- * @author Sourcecodester
+ * @author Stephen-Jon Dixon, Roshane Roach, Jhanoi Samuels,Danielle Tulloch, Shenelle Turner,Victoria Whyte
  */
 public class Login extends javax.swing.JFrame {
 
@@ -131,6 +127,8 @@ public class Login extends javax.swing.JFrame {
         loginPanel.getAccessibleContext().setAccessibleName("");
 
         pack();
+setLocationRelativeTo(null);
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed

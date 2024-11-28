@@ -1,15 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package NardosTrackit.Inventory;
 
 import NardosSystem.MainMenu;
 
 /**
  *
- * @author Sourcecodester
+ * @author Stephen-Jon Dixon, Roshane Roach, Jhanoi Samuels,Danielle Tulloch, Shenelle Turner,Victoria Whyte
  */
 public class ItemManagement extends javax.swing.JFrame {
 
@@ -37,6 +33,7 @@ public class ItemManagement extends javax.swing.JFrame {
         viewButton = new javax.swing.JButton();
         deleteButton = new javax.swing.JButton();
         modifyButton = new javax.swing.JButton();
+        viewSpecItem = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
 
         jLabel3.setText("jLabel3");
@@ -45,12 +42,13 @@ public class ItemManagement extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel2.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel2.setBackground(new java.awt.Color(255, 204, 0));
         jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jPanel1.setBackground(new java.awt.Color(0, 51, 255));
+        jPanel1.setBackground(new java.awt.Color(255, 204, 102));
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
+        addButton.setBackground(new java.awt.Color(255, 255, 102));
         addButton.setText("Add Item");
         addButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,6 +56,7 @@ public class ItemManagement extends javax.swing.JFrame {
             }
         });
 
+        viewButton.setBackground(new java.awt.Color(153, 204, 255));
         viewButton.setText("View Item");
         viewButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,6 +64,7 @@ public class ItemManagement extends javax.swing.JFrame {
             }
         });
 
+        deleteButton.setBackground(new java.awt.Color(255, 204, 204));
         deleteButton.setText("Delete Item");
         deleteButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -72,10 +72,19 @@ public class ItemManagement extends javax.swing.JFrame {
             }
         });
 
+        modifyButton.setBackground(new java.awt.Color(204, 255, 204));
         modifyButton.setText("Modify Item");
         modifyButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 modifyButtonActionPerformed(evt);
+            }
+        });
+
+        viewSpecItem.setBackground(new java.awt.Color(255, 204, 255));
+        viewSpecItem.setText("View Specific Item");
+        viewSpecItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                viewSpecItemActionPerformed(evt);
             }
         });
 
@@ -85,25 +94,26 @@ public class ItemManagement extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(viewButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(deleteButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(modifyButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(viewSpecItem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(addButton, javax.swing.GroupLayout.DEFAULT_SIZE, 236, Short.MAX_VALUE)
+                    .addComponent(viewButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(deleteButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(modifyButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(23, 23, 23))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(addButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(viewButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(deleteButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(modifyButton)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addComponent(viewSpecItem)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(modifyButton))
         );
 
         jButton6.setText("Back");
@@ -149,12 +159,13 @@ public class ItemManagement extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(59, Short.MAX_VALUE)
+                .addContainerGap(55, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(78, 78, 78))
         );
 
         pack();
+setLocationRelativeTo(null);
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -168,8 +179,6 @@ public class ItemManagement extends javax.swing.JFrame {
         AddItem i = new AddItem();
         i.setVisible(true);
         this.dispose();
-
-
     }//GEN-LAST:event_addButtonActionPerformed
 
     private void viewButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewButtonActionPerformed
@@ -190,6 +199,12 @@ public class ItemManagement extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButton6ActionPerformed
 
+    private void viewSpecItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewSpecItemActionPerformed
+        ViewSpecificItem vs = new ViewSpecificItem();
+        vs.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_viewSpecItemActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -204,5 +219,6 @@ public class ItemManagement extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JButton modifyButton;
     private javax.swing.JButton viewButton;
+    private javax.swing.JButton viewSpecItem;
     // End of variables declaration//GEN-END:variables
 }

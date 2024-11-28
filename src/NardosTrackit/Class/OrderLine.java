@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package NardosTrackit.Class;
 
 import java.io.FileInputStream;
@@ -17,7 +13,7 @@ import NardosTrackit.Helpers.*;
 
 /**
  *
- * @author Sourcecodester
+ * @author Stephen-Jon Dixon, Roshane Roach, Jhanoi Samuels,Danielle Tulloch, Shenelle Turner,Victoria Whyte
  */
 public class OrderLine {
     ItemService itemService = new ItemService();

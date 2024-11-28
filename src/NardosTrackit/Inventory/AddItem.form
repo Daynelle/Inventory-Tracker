@@ -4,7 +4,7 @@
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-      <Color blue="cc" green="99" red="0" type="rgb"/>
+      <Color blue="0" green="99" red="ff" type="rgb"/>
     </Property>
   </Properties>
   <SyntheticProperties>
@@ -94,16 +94,25 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI Semibold" size="12" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Item Name"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI Semibold" size="12" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Item Price"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI Semibold" size="12" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Item Quantity"/>
       </Properties>
     </Component>
@@ -116,7 +125,10 @@
     <Component class="javax.swing.JButton" name="addButton">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="99" green="ff" red="0" type="rgb"/>
+          <Color blue="33" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI Semibold" size="12" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Add"/>
       </Properties>
@@ -126,6 +138,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="backButton">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI Semibold" size="12" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Back"/>
       </Properties>
       <Events>

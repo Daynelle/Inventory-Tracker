@@ -11,7 +11,7 @@ import NardosTrackit.Helpers.*;;
 
 /**
  *
- * @author Sourcecodester
+ * @author Stephen-Jon Dixon, Roshane Roach, Jhanoi Samuels,Danielle Tulloch, Shenelle Turner,Victoria Whyte
  */
 public class UpdateItem extends javax.swing.JFrame {
 
@@ -66,16 +66,19 @@ public class UpdateItem extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(0, 153, 255));
+        setBackground(new java.awt.Color(0, 153, 153));
 
         text.setEditable(false);
-        text.setBackground(new java.awt.Color(204, 255, 204));
+        text.setBackground(new java.awt.Color(0, 204, 102));
         text.setColumns(20);
         text.setRows(5);
         jScrollPane1.setViewportView(text);
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         jLabel1.setText("Enter item name to update information");
 
+        updateButton.setBackground(new java.awt.Color(255, 255, 102));
+        updateButton.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         updateButton.setText("Update");
         updateButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -83,6 +86,7 @@ public class UpdateItem extends javax.swing.JFrame {
             }
         });
 
+        backButton.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         backButton.setText("Back");
         backButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,16 +94,22 @@ public class UpdateItem extends javax.swing.JFrame {
             }
         });
 
+        jLabel2.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         jLabel2.setText("Enter New Name");
 
+        jLabel3.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         jLabel3.setText("Enter New Price");
 
+        jLabel4.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         jLabel4.setText("Enter New Quantity");
 
+        jLabel5.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         jLabel5.setText("Name");
 
+        jLabel6.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         jLabel6.setText("Quantity");
 
+        jLabel7.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         jLabel7.setText("Price");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -172,6 +182,7 @@ public class UpdateItem extends javax.swing.JFrame {
         );
 
         pack();
+setLocationRelativeTo(null);
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

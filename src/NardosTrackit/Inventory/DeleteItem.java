@@ -10,7 +10,7 @@ import NardosTrackit.Helpers.*;;
 
 /**
  *
- * @author Sourcecodester
+ * @author Stephen-Jon Dixon, Roshane Roach, Jhanoi Samuels,Danielle Tulloch, Shenelle Turner,Victoria Whyte
  */
 public class DeleteItem extends javax.swing.JFrame {
 
@@ -54,16 +54,18 @@ public class DeleteItem extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 102, 255));
 
-        jPanel1.setBackground(new java.awt.Color(0, 153, 255));
+        jPanel1.setBackground(new java.awt.Color(0, 153, 102));
 
         text.setEditable(false);
-        text.setBackground(new java.awt.Color(204, 255, 204));
+        text.setBackground(new java.awt.Color(0, 204, 102));
         text.setColumns(20);
         text.setRows(5);
         jScrollPane1.setViewportView(text);
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         jLabel1.setText("Enter item name to delete");
 
+        backButton.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         backButton.setText("Back");
         backButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,6 +73,7 @@ public class DeleteItem extends javax.swing.JFrame {
             }
         });
 
+        deleteButton.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         deleteButton.setText("Delete");
         deleteButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,10 +115,13 @@ public class DeleteItem extends javax.swing.JFrame {
                 .addGap(18, 18, 18))
         );
 
+        jLabel2.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         jLabel2.setText("Name");
 
+        jLabel3.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         jLabel3.setText("Price");
 
+        jLabel4.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         jLabel4.setText("Quantity");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -138,7 +144,7 @@ public class DeleteItem extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(23, Short.MAX_VALUE)
+                .addContainerGap(19, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jLabel3)
@@ -149,6 +155,7 @@ public class DeleteItem extends javax.swing.JFrame {
         );
 
         pack();
+setLocationRelativeTo(null);
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
     private void performFileRelatedTask() {
