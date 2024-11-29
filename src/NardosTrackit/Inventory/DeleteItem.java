@@ -62,7 +62,7 @@ public class DeleteItem extends javax.swing.JFrame {
         text.setRows(5);
         jScrollPane1.setViewportView(text);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         jLabel1.setText("Enter item name to delete");
 
         backButton.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
@@ -155,7 +155,6 @@ public class DeleteItem extends javax.swing.JFrame {
         );
 
         pack();
-setLocationRelativeTo(null);
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
     private void performFileRelatedTask() {

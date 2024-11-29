@@ -1,6 +1,5 @@
-Chicken Patty,340.0,9
-Patty,270.0,10
+Cheese Patty,360.0,9
+Patty,270.0,7
 Water,100.0,20
-Bag Jooce,50.0,28
+Bag Juice,50.0,27
 Kiss Cake ,100.0,13
-Pringles,150.0,10

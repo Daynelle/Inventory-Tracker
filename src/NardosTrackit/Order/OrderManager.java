@@ -47,7 +47,7 @@ public class OrderManager extends javax.swing.JFrame {
         jLabel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         AddOrders.setBackground(new java.awt.Color(255, 255, 204));
-        AddOrders.setFont(new java.awt.Font("Forte", 0, 14)); // NOI18N
+        AddOrders.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         AddOrders.setText("Make New Order");
         AddOrders.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(0, 0, 0)));
         AddOrders.addActionListener(new java.awt.event.ActionListener() {
@@ -57,7 +57,7 @@ public class OrderManager extends javax.swing.JFrame {
         });
 
         ViewOrders.setBackground(new java.awt.Color(204, 255, 204));
-        ViewOrders.setFont(new java.awt.Font("Forte", 0, 14)); // NOI18N
+        ViewOrders.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         ViewOrders.setText("View All Orders");
         ViewOrders.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(0, 0, 0)));
         ViewOrders.addActionListener(new java.awt.event.ActionListener() {
@@ -67,7 +67,7 @@ public class OrderManager extends javax.swing.JFrame {
         });
 
         SearchOrders.setBackground(new java.awt.Color(153, 204, 255));
-        SearchOrders.setFont(new java.awt.Font("Forte", 0, 14)); // NOI18N
+        SearchOrders.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         SearchOrders.setText("Search Orders");
         SearchOrders.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(0, 0, 0)));
         SearchOrders.addActionListener(new java.awt.event.ActionListener() {
@@ -76,7 +76,7 @@ public class OrderManager extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setFont(new java.awt.Font("Forte", 0, 14)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         jButton1.setText("Back");
         jButton1.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(0, 0, 0)));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -86,7 +86,7 @@ public class OrderManager extends javax.swing.JFrame {
         });
 
         DelOrders.setBackground(new java.awt.Color(255, 204, 204));
-        DelOrders.setFont(new java.awt.Font("Forte", 0, 14)); // NOI18N
+        DelOrders.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         DelOrders.setText("Delete Orders");
         DelOrders.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(0, 0, 0)));
         DelOrders.addActionListener(new java.awt.event.ActionListener() {
@@ -99,7 +99,7 @@ public class OrderManager extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 389, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 389, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(117, 117, 117)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -140,7 +140,6 @@ public class OrderManager extends javax.swing.JFrame {
         );
 
         pack();
-setLocationRelativeTo(null);
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
